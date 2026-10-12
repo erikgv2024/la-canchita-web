@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instalaciones y servicios | La Canchita</title>
+<meta name="description" content="Conoce las instalaciones ficticias de La Canchita: canchas con techo y al aire libre, iluminación, baños, vestuarios y otros servicios.">
+<link rel="stylesheet" href="style/bootstrap.min.css">
+<link rel="stylesheet" href="style/estilos.css">
+<script src="js/bootstrap.bundle.min.js" defer></script>
+<script src="js/script.js" defer></script>
+</head>
+<body>
+<a class="salto" href="#contenido">Ir al contenido</a>
+<header class="cabecera"><div class="container cabecera-interior">
+<a href="index.html" class="marca" aria-label="La Canchita, inicio"><img src="images/logo-la-canchita.png" alt="La Canchita" width="2048" height="768"></a>
+<button class="btn boton-menu" id="boton-menu" type="button" aria-controls="menu-principal" aria-expanded="false">Menú <span aria-hidden="true">☰</span></button>
+<nav id="menu-principal" class="navegacion" aria-label="Menú principal">
+<a href="index.html">Inicio</a>
+<div class="grupo-submenu"><div class="enlace-canchas"><a href="canchas.html" >Canchas</a><button id="boton-submenu" type="button" aria-label="Mostrar opciones de canchas" aria-controls="submenu-canchas" aria-expanded="false"><span aria-hidden="true">▾</span></button></div>
+<ul id="submenu-canchas" class="submenu" hidden><li><a href="canchas.html">Todas las canchas</a></li><li><a href="canchas.html?deporte=futbol">Fútbol</a></li><li><a href="canchas.html?deporte=voley">Vóley</a></li></ul></div>
+<a href="precios-horarios.html" >Precios y horarios</a>
+<a href="instalaciones.html" aria-current="page">Instalaciones</a>
+<a href="solicitud-reserva.html">Solicitud de reserva</a>
+<a href="contacto.html">Contacto</a>
+</nav></div></header>
+<main id="contenido" tabindex="-1">
+<section class="seccion"><div class="container"><h1>Todo listo para jugar</h1><p class="introduccion">Canchas y servicios para disfrutar con tu grupo.<br>Negocio ficticio: imágenes ilustrativas de las canchas.</p>
+<div class="row g-4 instalaciones-canchas"><div class="col-md-6"><article class="tarjeta-deporte"><img src="images/futbol-con-techo.png" alt="Ilustración de una cancha de fútbol de grass sintético con techo" width="1536" height="1024"><div class="tarjeta-contenido"><h2>Canchas de fútbol</h2><p>7 canchas de grass sintético.<br>4 con techo y 3 al aire libre.<br>Hasta 14 jugadores por cancha.</p></div></article></div><div class="col-md-6"><article class="tarjeta-deporte"><img src="images/voley-con-techo.png" alt="Ilustración de una cancha de vóley de losa con techo" width="1536" height="1024"><div class="tarjeta-contenido"><h2>Canchas de vóley</h2><p>3 canchas de losa.<br>1 con techo y 2 al aire libre.<br>Hasta 12 jugadores por cancha.</p></div></article></div></div>
+<section class="servicios-instalaciones"><h2>Servicios adicionales</h2><div class="row g-4"><div class="col-md-6"><article class="bloque-informacion"><h3>Baños y vestuarios</h3><p>Espacios para cambiarte y prepararte antes de jugar.</p></article></div><div class="col-md-6"><article class="bloque-informacion"><h3>Estacionamiento</h3><p>Espacio para los vehículos de los visitantes.</p></article></div><div class="col-md-6"><article class="bloque-informacion"><h3>Venta de bebidas</h3><p>Bebidas para acompañar la actividad deportiva.</p></article></div><div class="col-md-6"><article class="bloque-informacion"><h3>Préstamo de balones</h3><p>Balones para practicar fútbol o vóley.</p></article></div></div></section>
+<section class="multimedia-instalaciones" aria-labelledby="titulo-galeria"><h2 id="titulo-galeria">Galería de canchas</h2><p>Imágenes ilustrativas generadas para La Canchita, un negocio ficticio.</p><div class="row g-4"><div class="col-sm-6"><figure class="foto-galeria"><a href="images/futbol-con-techo.png" target="_blank" rel="noopener" aria-label="Ver imagen ampliada: Fútbol con techo"><img src="images/futbol-con-techo.png" alt="Cancha ilustrativa de fútbol de grass sintético con techo" width="1536" height="1024" loading="lazy"></a><figcaption>Fútbol con techo</figcaption></figure></div><div class="col-sm-6"><figure class="foto-galeria"><a href="images/futbol-aire-libre.png" target="_blank" rel="noopener" aria-label="Ver imagen ampliada: Fútbol al aire libre"><img src="images/futbol-aire-libre.png" alt="Cancha ilustrativa de fútbol de grass sintético al aire libre" width="1536" height="1024" loading="lazy"></a><figcaption>Fútbol al aire libre</figcaption></figure></div><div class="col-sm-6"><figure class="foto-galeria"><a href="images/voley-con-techo.png" target="_blank" rel="noopener" aria-label="Ver imagen ampliada: Vóley con techo"><img src="images/voley-con-techo.png" alt="Cancha ilustrativa de vóley de losa con techo" width="1536" height="1024" loading="lazy"></a><figcaption>Vóley con techo</figcaption></figure></div><div class="col-sm-6"><figure class="foto-galeria"><a href="images/voley-aire-libre.png" target="_blank" rel="noopener" aria-label="Ver imagen ampliada: Vóley al aire libre"><img src="images/voley-aire-libre.png" alt="Cancha ilustrativa de vóley de losa al aire libre" width="1536" height="1024" loading="lazy"></a><figcaption>Vóley al aire libre</figcaption></figure></div></div><p class="nota">Selecciona una imagen para verla ampliada en otra pestaña.</p></section>
+<section class="multimedia-instalaciones" aria-labelledby="titulo-video"><h2 id="titulo-video">Conoce nuestras canchas</h2><p>Video ilustrativo de 20 segundos, sin audio. Incluye rótulos de cada tipo de cancha.</p><video id="video-canchas" class="video-canchas" controls playsinline preload="metadata" poster="images/futbol-con-techo.png" width="1280" height="720"><source src="videos/canchas-la-canchita.mp4" type="video/mp4">Tu navegador no puede reproducir este video. <a href="videos/canchas-la-canchita.mp4">Descargar video de las canchas</a>.</video><p class="nota">Contenido del video: fútbol con techo, fútbol al aire libre, vóley con techo y vóley al aire libre. Todas las escenas son imágenes generadas; no muestran instalaciones reales.</p><a href="videos/canchas-la-canchita.mp4" download>Descargar video ilustrativo</a></section>
+<p class="precio mt-4">Todas las canchas tienen iluminación.</p><p class="nota">Los costos y condiciones de servicios adicionales están por definir.</p><a class="btn boton-principal mt-3" href="precios-horarios.html">Consultar precios</a></div></section></main>
+<footer class="pie"><div class="container"><p class="pie-titulo">La Canchita · San Juan de Miraflores, Lima</p><p>Lunes a domingo · 8:00 a. m. a 11:00 p. m.</p><small>Proyecto académico · Negocio ficticio<br>Imágenes ilustrativas generadas</small></div></footer>
+</body>
+</html>
