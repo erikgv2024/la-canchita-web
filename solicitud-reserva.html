@@ -1,43 +1,286 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Solicitud de reserva de ejemplo | La Canchita</title>
-<meta name="description" content="Prepara una solicitud de alquiler de ejemplo en La Canchita con tus datos, cancha y horario. Proyecto académico sin reservas reales ni pagos.">
-<link rel="stylesheet" href="style/bootstrap.min.css">
-<link rel="stylesheet" href="style/estilos.css">
-<script src="js/bootstrap.bundle.min.js" defer></script>
-<script src="js/script.js" defer></script>
-</head>
-<body>
-<a class="salto" href="#contenido">Ir al contenido</a>
-<header class="cabecera"><div class="container cabecera-interior">
-<a href="index.html" class="marca" aria-label="La Canchita, inicio"><img src="images/logo-la-canchita.png" alt="La Canchita" width="2048" height="768"></a>
-<button class="btn boton-menu" id="boton-menu" type="button" aria-controls="menu-principal" aria-expanded="false">Menú <span aria-hidden="true">☰</span></button>
-<nav id="menu-principal" class="navegacion" aria-label="Menú principal">
-<a href="index.html">Inicio</a>
-<div class="grupo-submenu"><div class="enlace-canchas"><a href="canchas.html" >Canchas</a><button id="boton-submenu" type="button" aria-label="Mostrar opciones de canchas" aria-controls="submenu-canchas" aria-expanded="false"><span aria-hidden="true">▾</span></button></div>
-<ul id="submenu-canchas" class="submenu" hidden><li><a href="canchas.html">Todas las canchas</a></li><li><a href="canchas.html?deporte=futbol">Fútbol</a></li><li><a href="canchas.html?deporte=voley">Vóley</a></li></ul></div>
-<a href="precios-horarios.html" >Precios y horarios</a>
-<a href="instalaciones.html">Instalaciones</a>
-<a href="solicitud-reserva.html" aria-current="page">Solicitud de reserva</a>
-<a href="contacto.html">Contacto</a>
-</nav></div></header>
-<main id="contenido" tabindex="-1">
-<section class="seccion"><div class="container"><h1>Solicitud de reserva</h1><p class="introduccion">Completa tus datos y calcula el precio del alquiler.<br>Esta es una demostración académica.</p>
-<p class="aviso-demostracion">No se realiza una reserva real ni se cobra dinero.</p>
-<div class="row g-5 solicitud-contenido"><div class="col-lg-7"><form id="formulario-reserva" aria-describedby="estado-funciones" novalidate>
-<p id="errores-formulario" class="mensaje-error" role="alert" hidden></p>
-<div class="row g-4"><div class="col-md-6"><label for="nombre" class="form-label">Nombre *</label><input id="nombre" name="nombre" type="text" class="form-control" placeholder="Escribe tu nombre" autocomplete="name" required aria-describedby="error-nombre"><p id="error-nombre" class="mensaje-error" hidden></p></div><div class="col-md-6"><label for="correo" class="form-label">Correo *</label><input id="correo" name="correo" type="email" class="form-control" placeholder="Escribe tu correo" autocomplete="email" required aria-describedby="error-correo"><p id="error-correo" class="mensaje-error" hidden></p></div><div class="col-12"><label for="telefono" class="form-label">Teléfono *</label><input id="telefono" name="telefono" type="tel" class="form-control" placeholder="Escribe tu teléfono" autocomplete="tel" required aria-describedby="error-telefono"><p id="error-telefono" class="mensaje-error" hidden></p></div><div class="col-12"><label for="cancha" class="form-label">Cancha *</label><select id="cancha" name="cancha" class="form-select" required aria-describedby="error-cancha"><option value="">Selecciona una cancha</option><option value="futbol-1" data-deporte="futbol">Fútbol 01 · Con techo</option><option value="futbol-2" data-deporte="futbol">Fútbol 02 · Con techo</option><option value="futbol-3" data-deporte="futbol">Fútbol 03 · Con techo</option><option value="futbol-4" data-deporte="futbol">Fútbol 04 · Con techo</option><option value="futbol-5" data-deporte="futbol">Fútbol 05 · Al aire libre</option><option value="futbol-6" data-deporte="futbol">Fútbol 06 · Al aire libre</option><option value="futbol-7" data-deporte="futbol">Fútbol 07 · Al aire libre</option><option value="voley-1" data-deporte="voley">Vóley 01 · Con techo</option><option value="voley-2" data-deporte="voley">Vóley 02 · Al aire libre</option><option value="voley-3" data-deporte="voley">Vóley 03 · Al aire libre</option></select><p id="error-cancha" class="mensaje-error" hidden></p></div><div class="col-md-6"><label for="fecha" class="form-label">Fecha *</label><input id="fecha" name="fecha" type="date" class="form-control" required aria-describedby="error-fecha"><p id="error-fecha" class="mensaje-error" hidden></p></div><div class="col-md-6"><label for="hora" class="form-label">Hora de inicio *</label><select id="hora" name="hora" class="form-select" required aria-describedby="error-hora"><option value="">Selecciona la hora</option><option value="8">08:00</option><option value="9">09:00</option><option value="10">10:00</option><option value="11">11:00</option><option value="12">12:00</option><option value="13">13:00</option><option value="14">14:00</option><option value="15">15:00</option><option value="16">16:00</option><option value="17">17:00</option><option value="18">18:00</option><option value="19">19:00</option><option value="20">20:00</option><option value="21">21:00</option><option value="22">22:00</option></select><p id="error-hora" class="mensaje-error" hidden></p></div><div class="col-12"><label for="duracion" class="form-label">Duración *</label><select id="duracion" name="duracion" class="form-select" required aria-describedby="error-duracion"><option value="">Selecciona las horas</option><option value="1">1 hora</option><option value="2">2 horas</option><option value="3">3 horas</option><option value="4">4 horas</option><option value="5">5 horas</option><option value="6">6 horas</option><option value="7">7 horas</option><option value="8">8 horas</option><option value="9">9 horas</option><option value="10">10 horas</option><option value="11">11 horas</option><option value="12">12 horas</option><option value="13">13 horas</option><option value="14">14 horas</option><option value="15">15 horas</option></select><p id="error-duracion" class="mensaje-error" hidden></p></div></div>
-<p class="nota">* Campos obligatorios</p><button id="enviar-solicitud" type="submit" class="btn boton-principal" aria-describedby="estado-funciones">Preparar solicitud de ejemplo</button><p id="estado-funciones" class="nota">El resumen se muestra únicamente en esta página. Los datos escritos no se envían ni se guardan.</p></form>
-<section id="confirmacion-solicitud" class="confirmacion-solicitud" aria-labelledby="titulo-confirmacion" hidden tabindex="-1">
-<h2 id="titulo-confirmacion">Solicitud de ejemplo preparada</h2>
-<dl id="resumen-solicitud"></dl>
-<p>No se envió ningún dato ni se confirmó disponibilidad. Esta es una demostración sin reservas reales ni cobros.</p>
-<button id="volver-formulario" type="button" class="btn boton-principal">Volver al formulario</button>
-</section></div>
-<aside class="col-lg-5" aria-labelledby="titulo-calculadora"><div class="calculadora"><h2 id="titulo-calculadora">Calculadora de alquiler</h2><p>Usa cancha, hora y duración del formulario.<br>Fútbol: S/ 40 de día / S/ 50 de noche.<br>Vóley: S/ 30 de día / S/ 40 de noche.</p><button id="calcular-total" type="button" class="btn boton-principal w-100" aria-describedby="estado-funciones">Calcular total</button><p id="resultado-calculo" class="precio resultado-calculo" role="status" aria-live="polite">Selecciona cancha, hora y duración para calcular.</p><p class="nota">Desde las 5 p. m. se aplica tarifa nocturna.<br>El techo no cambia el precio.</p></div></aside></div></div></section></main>
-<footer class="pie"><div class="container"><p class="pie-titulo">La Canchita · San Juan de Miraflores, Lima</p><p>Lunes a domingo · 8:00 a. m. a 11:00 p. m.</p><small>Proyecto académico · Negocio ficticio<br>Imágenes ilustrativas generadas</small></div></footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solicitud de reserva de ejemplo | La Canchita</title>
+    <meta
+      name="description"
+      content="Prepara una solicitud de alquiler de ejemplo en La Canchita con tus datos, cancha y horario. Proyecto académico sin reservas reales ni pagos."
+    />
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/estilos.css" />
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <a class="salto" href="#contenido">Ir al contenido</a>
+    <header class="cabecera">
+      <div class="container cabecera-interior">
+        <a href="index.html" class="marca" aria-label="La Canchita, inicio"
+          ><img src="images/logo-la-canchita.png" alt="La Canchita" width="2048" height="768"
+        /></a>
+        <button
+          class="btn boton-menu"
+          id="boton-menu"
+          type="button"
+          aria-controls="menu-principal"
+          aria-expanded="false"
+        >
+          Menú <span aria-hidden="true">☰</span>
+        </button>
+        <nav id="menu-principal" class="navegacion" aria-label="Menú principal">
+          <a href="index.html">Inicio</a>
+          <div class="grupo-submenu">
+            <div class="enlace-canchas">
+              <a href="canchas.html">Canchas</a
+              ><button
+                id="boton-submenu"
+                type="button"
+                aria-label="Mostrar opciones de canchas"
+                aria-controls="submenu-canchas"
+                aria-expanded="false"
+              >
+                <span aria-hidden="true">▾</span>
+              </button>
+            </div>
+            <ul id="submenu-canchas" class="submenu" hidden>
+              <li><a href="canchas.html">Todas las canchas</a></li>
+              <li><a href="canchas.html?deporte=futbol">Fútbol</a></li>
+              <li><a href="canchas.html?deporte=voley">Vóley</a></li>
+            </ul>
+          </div>
+          <a href="precios-horarios.html">Precios y horarios</a>
+          <a href="instalaciones.html">Instalaciones</a>
+          <a href="solicitud-reserva.html" aria-current="page">Solicitud de reserva</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+    <main id="contenido" tabindex="-1">
+      <section class="seccion">
+        <div class="container">
+          <h1>Solicitud de reserva</h1>
+          <p class="introduccion">
+            Completa tus datos y calcula el precio del alquiler.<br />Esta es una demostración
+            académica.
+          </p>
+          <p class="aviso-demostracion">No se realiza una reserva real ni se cobra dinero.</p>
+          <div class="row g-5 solicitud-contenido">
+            <div class="col-lg-7">
+              <form id="formulario-reserva" aria-describedby="estado-funciones" novalidate>
+                <p id="errores-formulario" class="mensaje-error" role="alert" hidden></p>
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <label for="nombre" class="form-label">Nombre *</label
+                    ><input
+                      id="nombre"
+                      name="nombre"
+                      type="text"
+                      class="form-control"
+                      placeholder="Escribe tu nombre"
+                      autocomplete="name"
+                      required
+                      aria-describedby="error-nombre"
+                    />
+                    <p id="error-nombre" class="mensaje-error" hidden></p>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="correo" class="form-label">Correo *</label
+                    ><input
+                      id="correo"
+                      name="correo"
+                      type="email"
+                      class="form-control"
+                      placeholder="Escribe tu correo"
+                      autocomplete="email"
+                      required
+                      aria-describedby="error-correo"
+                    />
+                    <p id="error-correo" class="mensaje-error" hidden></p>
+                  </div>
+                  <div class="col-12">
+                    <label for="telefono" class="form-label">Teléfono *</label
+                    ><input
+                      id="telefono"
+                      name="telefono"
+                      type="tel"
+                      class="form-control"
+                      placeholder="Escribe tu teléfono"
+                      autocomplete="tel"
+                      required
+                      aria-describedby="error-telefono"
+                    />
+                    <p id="error-telefono" class="mensaje-error" hidden></p>
+                  </div>
+                  <div class="col-12">
+                    <label for="cancha" class="form-label">Cancha *</label
+                    ><select
+                      id="cancha"
+                      name="cancha"
+                      class="form-select"
+                      required
+                      aria-describedby="error-cancha"
+                    >
+                      <option value="">Selecciona una cancha</option>
+                      <option value="futbol-1" data-deporte="futbol">Fútbol 01 · Con techo</option>
+                      <option value="futbol-2" data-deporte="futbol">Fútbol 02 · Con techo</option>
+                      <option value="futbol-3" data-deporte="futbol">Fútbol 03 · Con techo</option>
+                      <option value="futbol-4" data-deporte="futbol">Fútbol 04 · Con techo</option>
+                      <option value="futbol-5" data-deporte="futbol">
+                        Fútbol 05 · Al aire libre
+                      </option>
+                      <option value="futbol-6" data-deporte="futbol">
+                        Fútbol 06 · Al aire libre
+                      </option>
+                      <option value="futbol-7" data-deporte="futbol">
+                        Fútbol 07 · Al aire libre
+                      </option>
+                      <option value="voley-1" data-deporte="voley">Vóley 01 · Con techo</option>
+                      <option value="voley-2" data-deporte="voley">Vóley 02 · Al aire libre</option>
+                      <option value="voley-3" data-deporte="voley">Vóley 03 · Al aire libre</option>
+                    </select>
+                    <p id="error-cancha" class="mensaje-error" hidden></p>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="fecha" class="form-label">Fecha *</label
+                    ><input
+                      id="fecha"
+                      name="fecha"
+                      type="date"
+                      class="form-control"
+                      required
+                      aria-describedby="error-fecha"
+                    />
+                    <p id="error-fecha" class="mensaje-error" hidden></p>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="hora" class="form-label">Hora de inicio *</label
+                    ><select
+                      id="hora"
+                      name="hora"
+                      class="form-select"
+                      required
+                      aria-describedby="error-hora"
+                    >
+                      <option value="">Selecciona la hora</option>
+                      <option value="8">08:00</option>
+                      <option value="9">09:00</option>
+                      <option value="10">10:00</option>
+                      <option value="11">11:00</option>
+                      <option value="12">12:00</option>
+                      <option value="13">13:00</option>
+                      <option value="14">14:00</option>
+                      <option value="15">15:00</option>
+                      <option value="16">16:00</option>
+                      <option value="17">17:00</option>
+                      <option value="18">18:00</option>
+                      <option value="19">19:00</option>
+                      <option value="20">20:00</option>
+                      <option value="21">21:00</option>
+                      <option value="22">22:00</option>
+                    </select>
+                    <p id="error-hora" class="mensaje-error" hidden></p>
+                  </div>
+                  <div class="col-12">
+                    <label for="duracion" class="form-label">Duración *</label
+                    ><select
+                      id="duracion"
+                      name="duracion"
+                      class="form-select"
+                      required
+                      aria-describedby="error-duracion"
+                    >
+                      <option value="">Selecciona las horas</option>
+                      <option value="1">1 hora</option>
+                      <option value="2">2 horas</option>
+                      <option value="3">3 horas</option>
+                      <option value="4">4 horas</option>
+                      <option value="5">5 horas</option>
+                      <option value="6">6 horas</option>
+                      <option value="7">7 horas</option>
+                      <option value="8">8 horas</option>
+                      <option value="9">9 horas</option>
+                      <option value="10">10 horas</option>
+                      <option value="11">11 horas</option>
+                      <option value="12">12 horas</option>
+                      <option value="13">13 horas</option>
+                      <option value="14">14 horas</option>
+                      <option value="15">15 horas</option>
+                    </select>
+                    <p id="error-duracion" class="mensaje-error" hidden></p>
+                  </div>
+                </div>
+                <p class="nota">* Campos obligatorios</p>
+                <button
+                  id="enviar-solicitud"
+                  type="submit"
+                  class="btn boton-principal"
+                  aria-describedby="estado-funciones"
+                >
+                  Preparar solicitud de ejemplo
+                </button>
+                <p id="estado-funciones" class="nota">
+                  El resumen se muestra únicamente en esta página. Los datos escritos no se envían
+                  ni se guardan.
+                </p>
+              </form>
+              <section
+                id="confirmacion-solicitud"
+                class="confirmacion-solicitud"
+                aria-labelledby="titulo-confirmacion"
+                hidden
+                tabindex="-1"
+              >
+                <h2 id="titulo-confirmacion">Solicitud de ejemplo preparada</h2>
+                <dl id="resumen-solicitud"></dl>
+                <p>
+                  No se envió ningún dato ni se confirmó disponibilidad. Esta es una demostración
+                  sin reservas reales ni cobros.
+                </p>
+                <button id="volver-formulario" type="button" class="btn boton-principal">
+                  Volver al formulario
+                </button>
+              </section>
+            </div>
+            <aside class="col-lg-5" aria-labelledby="titulo-calculadora">
+              <div class="calculadora">
+                <h2 id="titulo-calculadora">Calculadora de alquiler</h2>
+                <p>
+                  Usa cancha, hora y duración del formulario.<br />Fútbol: S/ 40 de día / S/ 50 de
+                  noche.<br />Vóley: S/ 30 de día / S/ 40 de noche.
+                </p>
+                <button
+                  id="calcular-total"
+                  type="button"
+                  class="btn boton-principal w-100"
+                  aria-describedby="estado-funciones"
+                >
+                  Calcular total
+                </button>
+                <p
+                  id="resultado-calculo"
+                  class="precio resultado-calculo"
+                  role="status"
+                  aria-live="polite"
+                >
+                  Selecciona cancha, hora y duración para calcular.
+                </p>
+                <p class="nota">
+                  Desde las 5 p. m. se aplica tarifa nocturna.<br />El techo no cambia el precio.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="pie">
+      <div class="container">
+        <p class="pie-titulo">La Canchita · San Juan de Miraflores, Lima</p>
+        <p>Lunes a domingo · 8:00 a. m. a 11:00 p. m.</p>
+        <small>Proyecto académico · Negocio ficticio<br />Imágenes ilustrativas generadas</small>
+      </div>
+    </footer>
+  </body>
 </html>
